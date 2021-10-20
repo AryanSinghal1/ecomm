@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    margin: 1vw;
+    text-decoration: none;
+    color: rgb(231, 211, 211);
+    font-size: larger;
+    border-bottom: 0vh solid aqua;
+    transition: ease-out 0.25s;
+}
+a:hover{
+    border-bottom: 0.5vh solid aqua;
+}
+
+img{
+    height: 30px;
+    width: 30px;
+}
