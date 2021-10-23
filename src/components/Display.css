@@ -11,30 +11,25 @@
 .searchBar input{
     height: 2rem;
     width: 25rem;
-    border: 1px solid black;
-    border-bottom: 1px solid #000000;
+    border: 0.1rem solid black;
     font-size: 1rem;
-}
-.searchBar input:focus{
-    border: none;
-    border-bottom: 2px solid aqua;
 }
 
 .searchBar button{
-    width: 7rem;
+    width: 20%;
     height: 2rem;
-    font-size: 1rem;
+    font-size: 100%;
 }
 .searchBar input::placeholder{
-    padding: .3rem;
+    padding: .2rem;
+    font-size: 100%;
     color: black;
 }
 .searchBar{
     margin: 2rem;
     height: 2rem;
-    width: 25rem;
+    width: 50%;
     display: flex;
-    justify-content: center;
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);

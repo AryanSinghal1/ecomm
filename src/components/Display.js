@@ -4,10 +4,12 @@ function Display() {
     return (
         <div className="Pages">
             <div className="content">
+                <form>
                 <div className="searchBar">
                     <input type="text" placeholder="Search anything you want"></input>
                     <button>Search</button>
                 </div>
+                </form>
                 <div className="slshow">
                 <div className="slideshow">
                      <div className="slide">
