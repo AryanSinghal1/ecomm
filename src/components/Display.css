@@ -2,19 +2,18 @@
 .Pages{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: auto;
-    width: 900px;
-    height: 600px;
+    width: 30rem;
+    height: 20rem;
     overflow: hidden;
 }
 .searchBar input{
-    height: 40px;
-    width: 40vw;
+    height: 2rem;
+    width: 25rem;
     border: 1px solid black;
     border-bottom: 1px solid #000000;
-    font-size: 20px;
+    font-size: 1rem;
 }
 .searchBar input:focus{
     border: none;
@@ -22,9 +21,9 @@
 }
 
 .searchBar button{
-    margin: 2px;
-    width: 70px;
-    height: 45px;
+    /* margin: .2rem; */
+    width: 7rem;
+    height: 2rem;
     
 }
 .searchBar input::placeholder{
@@ -32,12 +31,14 @@
     color: black;
 }
 .searchBar{
+    margin: 2rem;
+    width: 25rem;
     display: flex;
     justify-content: center;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    transform: translate(-50%,-50%);
+   text-align: center;
     z-index: 50;
 }
 
@@ -56,9 +57,13 @@ width: 300%;
 height: 100%;
 position: relative;
 animation: slshow 20s infinite;
+overflow: hidden;
 }
 .content {
     position: relative;
+}
+.slshow{
+    overflow: hidden;
 }
 @keyframes slshow {
 0% {left: 0; }
@@ -74,5 +79,4 @@ animation: slshow 20s infinite;
 75% {left: -100%; }
 85% {left: -100%; }
 90% {left: 0%; }
-/* 100%{left:0%} */
 }
