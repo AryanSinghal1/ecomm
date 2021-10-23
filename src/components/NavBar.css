@@ -7,12 +7,14 @@
     background-color: white;
 }
 .Navigation{
+    width: 400%;
     display: flex;
     color: white;
     margin: 0;
     padding: 0;
     height: 10vh;
     align-items: center;
+    /* font-size: 00.75rem; */
 }
 
 .MyCart{
@@ -43,8 +45,7 @@
 }
 
 .Nav2{
-    position: absolute;
-    right: 2px;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
+    /* font-size: 0.75rem; */
 }

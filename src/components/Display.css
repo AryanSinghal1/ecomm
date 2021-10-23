@@ -1,50 +1,78 @@
+
 .Pages{
-height: 90vh;
-width: 100vw;
-/* background-image: url('https://static.vecteezy.com/system/resources/previews/000/511/625/original/vector-sale-banner-big-summer-sale-sign-over-white-background.jpg'); */
-background-repeat: no-repeat;
-background-size: cover;
-display: flex;
-flex-direction: column;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
 }
 .searchBar input{
-    height: 45px;
+    height: 40px;
     width: 40vw;
-    background: transparent;
-    border: none;
+    border: 1px solid black;
     border-bottom: 1px solid #000000;
     font-size: 20px;
 }
 .searchBar input:focus{
     border: none;
     border-bottom: 2px solid aqua;
-    outline: none;
 }
 
 .searchBar button{
     margin: 2px;
     width: 70px;
     height: 45px;
-
+    
 }
-.slideshow img{
-    height: 90vh;
-    overflow: hidden;
+.searchBar input::placeholder{
+    padding: 3px;
+    color: black;
 }
 .searchBar{
+    display: flex;
+    justify-content: center;
     position: absolute;
-            left: 50%;
-            bottom: 80%;
-            transform: translate(-50%,50%);
-            z-index: 50;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 50;
+}
+
+.images{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide {
+    width: 100%;
+height: 100%;
 }
 .slideshow{
-    height: 100%;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            width: 400%;
-            height: 100%;
-            animation: slideshow 20s infinite;
+    display: flex;
+width: 300%;
+height: 100%;
+position: relative;
+animation: slshow 20s infinite;
+}
+.content {
+    position: relative;
+}
+@keyframes slshow {
+0% {left: 0; }
+10% {left: 0; }
+15% {left: -100%; }
+25% {left: -100%; }
+30% {left: -200%; }
+40% {left: -200%; }
+45% {left: -300%; }
+55% {left: -300%; }
+60% {left: -200%; }
+70% {left: -200%; }
+75% {left: -100%; }
+85% {left: -100%; }
+90% {left: 0%; }
+/* 100%{left:0%} */
 }
