@@ -3,9 +3,9 @@
     padding: 0;
 } */
 .item{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-image: white;
-    display: inline-flex;
-
+    display: flex;
+    flex-wrap: wrap;
 }
