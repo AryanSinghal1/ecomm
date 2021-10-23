@@ -1,34 +1,35 @@
 *{
-    margin: 0;
+    margin: 0px;
     padding: 0;
 }
 .cards{
-    background-color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
     height: 350px;
     width: 250px;
-    position: absolute;
-    top: 100px;
     border-radius: 10px;
+    align-items: center;
+    border: 1px solid black;
 }
 
-.product img{
-    width: 150px;
-    height: 175px;
-    position: absolute;
-    top: 30px;
-    left: 50px;
+.cards img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-top:10px;
 }
 .Info{
-    position: relative;
-    top:210px;
+    color: black;
     text-align: center;
 }
 .Add{
+    height: 30px;
     background-color: #af6b05;
-    width: 200px;
+    width: 180px;
     position: absolute;
-    bottom:5px;
-    left:25px;
+    margin: 270px 35px 0px 35px;
     text-align: center;
     border-radius: 10px;
     border: 2px solid black;

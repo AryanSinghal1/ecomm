@@ -3,18 +3,13 @@
     padding: 0;
 }
 a{
-    margin: 1vw;
+    margin: 10px;
     text-decoration: none;
-    color: rgb(231, 211, 211);
+    color: black;
     font-size: larger;
-    border-bottom: 0vh solid aqua;
+    border-bottom: 0px solid aqua;
     transition: ease-out 0.25s;
 }
 a:hover{
-    border-bottom: 0.5vh solid aqua;
-}
-
-img{
-    height: 30px;
-    width: 30px;
+    border-bottom: 3px solid aqua;
 }

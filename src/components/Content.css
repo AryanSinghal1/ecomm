@@ -6,7 +6,7 @@
     height: 90vh;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(black , white);
+    background-image: white;
     background-repeat: no-repeat;
     background-size: cover;
     animation: ease-in 2s 1;
