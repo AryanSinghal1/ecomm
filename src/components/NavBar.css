@@ -5,16 +5,18 @@
 .NavBar{
     display: flex;
     background-color: white;
+    width: 100%;
+    overflow: hidden;
 }
 .Navigation{
-    width: 400%;
+    width: 100%;
     display: flex;
     color: white;
     margin: 0;
     padding: 0;
     height: 10vh;
     align-items: center;
-    /* font-size: 00.75rem; */
+    font-size: 1rem;
 }
 
 .MyCart{
@@ -47,5 +49,5 @@
 .Nav2{
     display: flex;
     justify-content: flex-end;
-    /* font-size: 0.75rem; */
+    font-size: 1rem;
 }
