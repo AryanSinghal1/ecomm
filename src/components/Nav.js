@@ -3,7 +3,7 @@ import './Nav.css';
 function Nav(props) {
     return (
         <>
-        <a href="#top">{props.val}</a>
+            <a href="#top">{props.val}</a>
         </>
     )
 }
