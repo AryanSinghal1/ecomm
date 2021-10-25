@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.loginPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.loginBox{
+    overflow: hidden;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    outline: .1rem solid black;
+    border-radius: .4rem;
+    width: 20rem;
+    height: 20rem;
+}
+.inputField input{
+    width:90%;
+    border: none;
+    padding: .2rem;
+}
+.inputField input::placeholder{
+    text-align: center;
+}
+.inputField input:focus{
+    outline: none;
+    border-bottom: .2rem solid red;
+}
+.loginPage p{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 20rem;
+    word-wrap: break-word;
+}
+.loginPage button{
+    height: 3rem;
+    margin: 1rem 0rem 0rem 0rem;
+}
+.loginPage h1{
+    margin: 2rem;
+    font-size: 2rem;
+    overflow: hidden;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
