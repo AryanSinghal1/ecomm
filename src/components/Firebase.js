@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyBQGt-M71Xv7rCcVS3KvbRNzHqPLoHfm4s",
   authDomain: "e-commerce-c3544.firebaseapp.com",
@@ -10,7 +10,4 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-export function signup(email, password) {
-  return createUserWithEmailAndPassword(auth, email, password);
-}
+export const auth = getAuth(app);

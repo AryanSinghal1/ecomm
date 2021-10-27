@@ -15,7 +15,7 @@ function CartProducts() {
     }
     return (<div className='products'>
             <div className='productImages'>
-            <img src='https://picsum.photos/200/300'></img>
+            <img src='https://picsum.photos/200/300' alt="ProdImage"></img>
         </div>
         <div className='productinfo'>
             <h4>This is this</h4>
