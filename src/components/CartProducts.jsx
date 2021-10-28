@@ -13,7 +13,8 @@ function CartProducts() {
     const increase=()=>{
         setItem(item+1);
     }
-    return (<div className='products'>
+    return (
+    <div className='products'>
             <div className='productImages'>
             <img src='https://picsum.photos/200/300' alt="ProdImage"></img>
         </div>

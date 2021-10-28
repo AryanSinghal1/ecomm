@@ -3,13 +3,18 @@ import Items from './Items/Items';
 import NavBar from './NavBar';
 import './HomePage.css';
 import Display from './Display';
+import Features from './Features';
+import Categories from './Categories';
 
 function HomePage() {
     return (
         <>
           <NavBar/>
           <Display/>
-          <Items/>
+          <Features/>
+          <Categories Cat='A'/>
+          <Categories Cat='B'/>
+          <Categories Cat='C'/>
         </>
     )
 }
