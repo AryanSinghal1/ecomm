@@ -1,5 +1,4 @@
-import React from 'react'
-import Items from './Items/Items';
+import React from 'react';
 import NavBar from './NavBar';
 import './HomePage.css';
 import Display from './Display';

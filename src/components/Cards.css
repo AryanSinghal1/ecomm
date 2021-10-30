@@ -1,42 +1,40 @@
 *{
-    margin: 0px;
-    padding: 0;
+    margin: 0rem;
+    padding: 0rem;
 }
 .cards{
-    margin: 10px;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     background-color:white;
-    height: 350px;
-    width: 250px;
-    border-radius: 10px;
+    height: 25rem;
+    width: 20rem;
+    border-radius: 1rem;
     align-items: center;
-    border: 1px solid black;
+    border: .1rem solid black;
 }
 
 .cards img{
     width: 100%;
-    height: 200px;
+    height: 13rem;
     object-fit: contain;
-    margin-top:10px;
+    margin-top:1rem;
 }
 .Info{
     color: black;
     text-align: center;
 }
 .Add{
-    height: 30px;
+    height: 2.5rem;
     background-color: #af6b05;
-    width: 180px;
-    position: absolute;
-    margin: 270px 35px 0px 35px;
+    width: 18rem;
     text-align: center;
-    border-radius: 10px;
-    border: 2px solid black;
+    border-radius: 1rem;
+    border: 0.1rem solid black;
     cursor: pointer;
 }
 .Add p{
-    padding: 5px;
+    padding: 0.5rem;
 }
 .Add a{
     color: black;
@@ -46,4 +44,8 @@
 }
 .Add:hover{
     background-color: blanchedalmond;
+}
+.proDesc{
+height: 22rem;
+width: 100%;
 }
