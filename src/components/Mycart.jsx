@@ -14,6 +14,7 @@ function Mycart() {
                 <CartProducts/>
                 <CartProducts/>
             </div>
+            <div ></div>
         </div>
     )
 }
