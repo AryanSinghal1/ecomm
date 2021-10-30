@@ -55,3 +55,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.submitButton{
+    width: 100%;
+}
+#submit:hover{
+border: none;
+}
