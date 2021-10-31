@@ -22,7 +22,7 @@ function CartProducts(prod) {
             <h4>{prod.heading}</h4>
             <p>{prod.about}</p>
             <br></br>
-            <strong>{prod.price}</strong>
+            <strong>Rs. {prod.price}</strong>
         </div>
         <div id='items'>
             <button className='btn' onClick={increase}>+</button>

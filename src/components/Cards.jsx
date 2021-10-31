@@ -12,8 +12,9 @@ function Cards(card) {
       <div className="proDesc">
       <img src={card.image} alt="product"></img>
       <div className="Info">
-        <h4>{card.title}</h4>
+        <h3>{card.title}</h3>
         <p>⭐⭐⭐⭐⭐</p>
+        <h4>Rs. {card.price}</h4>
         <p>{card.description}</p>
       </div>
       </div>
