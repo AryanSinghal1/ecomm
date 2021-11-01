@@ -1,15 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CartProducts from './CartProducts';
 import NavBar from './NavBar';
 import './MyCart.css';
 import Product from './Product';
 function Mycart() {
-    let tPrice = Product.reduce((elem,next)=>{ 
-        return (elem.price+','+next.price)
-    });
-    console.log(tPrice);
-    const [item,setItem] = useState(Product);
-    console.log(Product);
     return (
         <div className='shoppingCart'>
             <NavBar />
@@ -20,7 +14,7 @@ function Mycart() {
                 })}
             </div>
             <div className="subtotal">
-                Your total is: Rs. { tPrice }
+                Your total is: Rs. tPrice 
             </div>
         </div>
     )

@@ -6,7 +6,7 @@ function Wishlist() {
     return (
         <div className='shoppingCart'>
             <NavBar />
-            <h2>Welcome to your Wishlist</h2>
+            <h2 style={{color:'white', margin:'2rem'}}>Welcome to your Wishlist</h2>
             <div className='item'>
             <Cards title="It is a card" description="This is Description" image="https://picsum.photos/seed/picsum/600/900" />
             <Cards title="It is a card" description="This is Description" />
