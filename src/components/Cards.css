@@ -49,3 +49,14 @@
 height: 22rem;
 width: 100%;
 }
+h3{
+    font-size: 1.2rem;
+    word-wrap: break-word;
+}
+h4{
+    font-size: 1rem;
+}
+p{
+    font-size: .75rem;
+    word-wrap: break-word;
+}

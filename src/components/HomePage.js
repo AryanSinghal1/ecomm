@@ -11,9 +11,7 @@ function HomePage() {
           <NavBar/>
           <Display/>
           <Features/>
-          <Categories Cat='A'/>
-          <Categories Cat='B'/>
-          <Categories Cat='C'/>
+          <Categories/>
         </>
     )
 }

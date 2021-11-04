@@ -1,0 +1,13 @@
+.emptyCart{
+    height: 85.2vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cartEmpty{
+    margin: 3rem;
+}
+.emptyButton{
+    padding: 1rem;
+}

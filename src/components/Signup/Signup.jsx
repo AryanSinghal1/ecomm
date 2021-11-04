@@ -28,7 +28,7 @@ function Signup() {
     };
     return (
         <div className="regPage">
-            <h1>Register To YourCart</h1>
+            <h1 style={{color:'white'}}>Register To YourCart</h1>
             <form className="regBox" onSubmit={formSubmit}>
                 <div className="inputField">
                     <p>Enter Your Name:</p>
@@ -47,8 +47,9 @@ function Signup() {
                     <input type="password" placeholder="Re Enter The Same Password" onChange={(e) => { setReEnter(e.target.value) }}></input>
                 </div>
                 <span className="error">{ErrorMessage}</span>
-                <p style={{ fontSize: '.7rem' }}>By continuing, you agree to Yourkart's Terms of Use and Privacy Policy.</p>
-                <button onClick={register}>Submit</button>
+                <p style={{ fontSize: '.7rem' }}>By continuing, You agree to Yourkart's Terms of Use and Privacy Policy.</p>
+                <button style={{backgroundColor:'orange',
+            color:'white', fontSize:'1rem', border:'none', cursor:'pointer'}} onClick={register}>Submit</button>
             </form>
             <div className="SignIn" style={{ color: 'orange' }}>
                 <span>Already have an account?</span><span><Link style={{ color: 'orange' }} to="/">Log in</Link></span>

@@ -9,6 +9,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-color: #790604;
 }
 .regBox{
     overflow: hidden;
@@ -20,6 +21,7 @@
     padding: 2rem;
     outline: .1rem solid black;
     border-radius: .4rem;
+    background-color: white;
     /* width: 20rem;
     height: 20rem; */
 }
