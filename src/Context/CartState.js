@@ -1,0 +1,29 @@
+import { useReducer } from 'react';
+import Context from './Context';
+import React from 'react';
+import { AddToCart, RemoveCartItem } from './Types';
+import { ReduceCart } from './Reducer';
+
+function CartState({ children }) {
+    const initialState = {
+        cartItem: [],
+    };
+    const [state, dispatch] = useReducer(ReduceCart, initialState);
+    const addCart = (item) => {
+        dispatch({ type: AddToCart, payload: item })
+    }
+    const removeItem = (id) => {
+        dispatch({ type: RemoveCartItem, payload: id })
+    }
+    return (
+        <Context.Provider value={{
+            cartItem: state.cartItem,
+            addCart,
+            removeItem
+        }}>
+            {children}
+        </Context.Provider>
+    )
+}
+
+export default CartState;

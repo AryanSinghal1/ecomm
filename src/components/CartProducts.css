@@ -10,6 +10,8 @@
     max-height: 100%;
 }
 .products{
+    background-color: white;
+    color: black; 
     margin: 2rem;
     width: 60rem;
     height: 20rem;
