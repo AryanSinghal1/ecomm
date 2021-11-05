@@ -1,62 +1,66 @@
-*{
-    margin: 0rem;
-    padding: 0rem;
+* {
+  margin: 0rem;
+  padding: 0rem;
 }
-.cards{
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    background-color:white;
-    height: 25rem;
-    width: 20rem;
-    border-radius: 1rem;
-    align-items: center;
-    border: .1rem solid black;
+.cards {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 25rem;
+  width: 20rem;
+  border-radius: 1rem;
+  align-items: center;
+  border: 0.1rem solid black;
 }
 
-.cards img{
-    width: 100%;
-    height: 13rem;
-    object-fit: contain;
-    margin-top:1rem;
+.cards img {
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+  margin-top: 1rem;
 }
-.Info{
-    color: black;
-    text-align: center;
+.Info {
+  color: black;
+  text-align: center;
 }
-.Add{
-    height: 2.5rem;
-    background-color: #af6b05;
-    width: 18rem;
-    text-align: center;
-    border-radius: 1rem;
-    border: 0.1rem solid black;
-    cursor: pointer;
+.Add {
+  height: 2.5rem;
+  background-color: #af6b05;
+  width: 18rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: 0.1rem solid black;
+  cursor: pointer;
+  margin: 0.1rem;
 }
-.Add p{
-    padding: 0.5rem;
+.Add p {
+  padding: 0.5rem;
 }
-.Add a{
-    color: black;
+.Add a {
+  color: black;
 }
-.Add a:hover{
-    border: none;
+.Add a:hover {
+  border: none;
 }
-.Add:hover{
-    background-color: blanchedalmond;
+.Add:hover {
+  background-color: blanchedalmond;
 }
-.proDesc{
-height: 22rem;
-width: 100%;
+.proDesc {
+  height: 22rem;
+  width: 100%;
 }
-h3{
-    font-size: 1.2rem;
-    word-wrap: break-word;
+h3 {
+  font-size: 1.2rem;
+  word-wrap: break-word;
 }
-h4{
-    font-size: 1rem;
+h4 {
+  font-size: 1rem;
 }
-p{
-    font-size: .75rem;
-    word-wrap: break-word;
+p {
+  font-size: 0.75rem;
+  word-wrap: break-word;
 }
+/* #prodImage{
+    width: 0;
+} */

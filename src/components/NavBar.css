@@ -1,52 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.NavBar{
-    display: flex;
-    background-color: white;
-    width: 100%;
-    overflow: hidden;
+.NavBar {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  overflow: hidden;
 }
-.Navigation{
-    width: 100%;
-    display: flex;
-    color: white;
-    margin: 0;
-    padding: 0;
-    height: 10vh;
-    align-items: center;
-    font-size: 1rem;
-}
-
-.YourCart{
-    cursor: pointer;
-    border-bottom: 0vh solid aqua;
-    transition: ease-out 0.25s;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 1rem;
-}
-.YourCart img{
-    width: 2rem;
-    height: 2rem;
+.Navigation {
+  width: 100%;
+  display: flex;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  align-items: center;
+  font-size: 1rem;
 }
 
-.cart{
-    display: inline;
-    background-image: "https://th.bing.com/th/id/R.6684cdc1428f0d05e6856bcfb24fbba6?rik=A56sKO21j5qhZg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f04%2fCart-PNG-HD.png&ehk=5%2bAlVUxxMKZd0va1b05fjsc6iux3eiFoqu9qakOCYLY%3d&risl=&pid=ImgRaw&r=0";
-    width: 2rem;
-    height: 2rem;
+.YourCart {
+  cursor: pointer;
+  border-bottom: 0vh solid aqua;
+  transition: ease-out 0.25s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 1rem;
 }
-.MyCart:hover{
-    border-bottom: 0.5vh solid aqua;
+.YourCart img {
+  width: 2rem;
+  height: 2rem;
 }
 
-.Nav2{
-    display: flex;
-    justify-content: flex-end;
-    font-size: 1rem;
+.cart {
+  display: inline;
+  background-image: "https://th.bing.com/th/id/R.6684cdc1428f0d05e6856bcfb24fbba6?rik=A56sKO21j5qhZg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f04%2fCart-PNG-HD.png&ehk=5%2bAlVUxxMKZd0va1b05fjsc6iux3eiFoqu9qakOCYLY%3d&risl=&pid=ImgRaw&r=0";
+  width: 2rem;
+  height: 2rem;
+}
+.MyCart:hover {
+  border-bottom: 0.5vh solid aqua;
+}
+
+.Nav2 {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1rem;
 }
