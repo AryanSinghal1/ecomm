@@ -22,7 +22,7 @@ function Cards(card) {
         style={{ backgroundColor: "#780607" }}
         onClick={() => addWish(card)}
       >
-        Add To Wishlist
+        {card.wishlist}
       </button>
       <button className="Add" onClick={() => addCart(card)}>
         Add To Cart

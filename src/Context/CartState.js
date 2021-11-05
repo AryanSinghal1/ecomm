@@ -26,6 +26,7 @@ function CartState({ children }) {
     <Context.Provider
       value={{
         cartItem: state.cartItem,
+        wishItem: state.wishItem,
         addCart,
         addWish,
         removeWish,

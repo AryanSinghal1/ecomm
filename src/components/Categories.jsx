@@ -19,6 +19,7 @@ function Categories() {
                 description={e.about}
                 price={e.price}
                 id={e.id}
+                wishlist="Add To WishList"
                 key={e.id}
               />
             );
@@ -36,6 +37,7 @@ function Categories() {
                 description={e.about}
                 price={e.price}
                 id={e.id}
+                wishlist="Add To WishList"
                 key={e.id}
               />
             );
@@ -54,6 +56,7 @@ function Categories() {
                 price={e.price}
                 id={e.id}
                 key={e.id}
+                wishlist="Add To WishList"
               />
             );
           })}
