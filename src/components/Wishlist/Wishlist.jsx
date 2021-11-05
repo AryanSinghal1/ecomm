@@ -12,7 +12,17 @@ function Wishlist() {
         Welcome to your Wishlist
       </h2>
       <div className="items">
-        <Cards />)
+        {
+          wishItem.map((e)=>{
+            return <Cards 
+            image={e.image}
+            title={e.title}
+            description={e.description}
+            price={e.price}
+            id={e.id}
+            />
+          })
+        }
         {/* <Cards title="It is a card" description="This is Description" image="https://picsum.photos/seed/picsum/600/900" />
             <Cards title="It is a card" description="This is Description" />
             <Cards title="It is a card" description="This is Description" /> */}
