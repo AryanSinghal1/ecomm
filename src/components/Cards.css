@@ -10,57 +10,48 @@
   height: 25rem;
   width: 20rem;
   border-radius: 1rem;
-  align-items: center;
   border: 0.1rem solid black;
+  align-items: center;
+  padding: 0.5rem;
+}
+#prodImage{
+  width: 100%;
+  height: 70%;
+}
+
+.proDesc{
+  height: 85% !important;
+  width: 90%;
+  justify-content: center;
 }
 
 .cards img {
   width: 100%;
-  height: 10rem;
+  height: 100%;
   object-fit: contain;
-  margin-top: 1rem;
 }
 .Info {
   color: black;
-  text-align: center;
-}
-.Add {
-  height: 2.5rem;
-  background-color: #af6b05;
-  width: 18rem;
-  text-align: center;
-  border-radius: 1rem;
-  border: 0.1rem solid black;
-  cursor: pointer;
-  margin: 0.1rem;
-}
-.Add p {
-  padding: 0.5rem;
-}
-.Add a {
-  color: black;
-}
-.Add a:hover {
-  border: none;
-}
-.Add:hover {
-  background-color: blanchedalmond;
-}
-.proDesc {
-  height: 22rem;
+  text-align: left;
   width: 100%;
+  height: 27%;
+  overflow-y: hidden;
+  margin-left: 0.2rem;
+ 
 }
-h3 {
-  font-size: 1.2rem;
-  word-wrap: break-word;
+.Addbtns{
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+
 }
-h4 {
-  font-size: 1rem;
+
+.Add{
+  width: 7rem;
+  height: 3rem;
+  border-radius: 10px;
+
+
 }
-p {
-  font-size: 0.75rem;
-  word-wrap: break-word;
-}
-/* #prodImage{
-    width: 0;
-} */

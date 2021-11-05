@@ -17,6 +17,7 @@ function Cards(card) {
           <p>{card.description}</p>
         </div>
       </div>
+      <div className="Addbtns">
       <button
         className="Add"
         style={{ backgroundColor: "#780607" }}
@@ -24,9 +25,12 @@ function Cards(card) {
       >
         {card.wishlist}
       </button>
-      <button className="Add" onClick={() => addCart(card)}>
+      <button className="Add" onClick={() => {
+        addCart(card)
+        alert("Successfully Added to cart!!")}}>
         Add To Cart
       </button>
+      </div>
     </div>
   );
 }
