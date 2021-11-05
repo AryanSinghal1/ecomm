@@ -1,16 +1,16 @@
-.shoppingCart{
-    width: 100%;
-    height: 100%;
+.shoppingCart {
+  width: 100%;
+  height: 100%;
 }
 
-.Products{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+.Products {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
-h2{
-    font-size: 1.5rem;
+h2 {
+  font-size: 1.5rem;
 }

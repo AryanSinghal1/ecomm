@@ -1,12 +1,20 @@
-.categories{
-    width: 85%;
-    height: 50%;
-    border: 2px solid black;
-    margin: 2rem;
-    border-radius: 5px;
-    padding: 40px;
-    border: 0.1rem solid grey;
-    box-shadow: 1rem 1rem 1rem grey;
-    background-color: #780904;
-    color: white;
+.categories {
+  width: 85%;
+  height: 50%;
+  border: 0.2rem solid black;
+  margin: 2rem;
+  border-radius: 5px;
+  padding: 3rem;
+  border: 0.1rem solid grey;
+  box-shadow: 1rem 1rem 1rem grey;
+  background-color: #780904;
+  color: white;
+}
+.item {
+  height: 100%;
+  width: 100%;
+  background-image: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
