@@ -12,6 +12,7 @@
   width: 25rem;
   border: 0.1rem solid black;
   font-size: 1rem;
+  padding-left: 1rem;
 }
 
 .searchBar button {
@@ -20,7 +21,6 @@
   font-size: 1rem;
 }
 .searchBar input::placeholder {
-  padding: 0.2rem;
   font-size: 100%;
   color: black;
 }

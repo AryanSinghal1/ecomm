@@ -1,4 +1,4 @@
-import { AddToCart, RemoveCartItem, AddToWish, RemoveFromWish } from "./Types";
+import { AddToCart, RemoveCartItem, AddToWish, RemoveFromWish, SignedIn } from "./Types";
 export const ReduceCart = (state, action) => {
   switch (action.type) {
     case AddToCart:
@@ -15,6 +15,8 @@ export const ReduceCart = (state, action) => {
         ...state,
         wishItem: state.wishItem.filter((prod) => prod.id !== action.payload),
       };
+      case SignedIn:
+      return { signIn: true };
     default:
       return state;
   }

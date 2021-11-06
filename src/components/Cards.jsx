@@ -3,7 +3,7 @@ import { useContext } from "react";
 import Context from "../Context/Context";
 import "./Cards.css";
 function Cards(card) {
-  const { addCart, addWish } = useContext(Context);
+  const { addCart, addWish, signIn } = useContext(Context);
   return (
     <div className="cards">
       <div className="proDesc">
@@ -21,7 +21,8 @@ function Cards(card) {
         <button
           className="Add"
           style={{ backgroundColor: "#780607" }}
-          onClick={() => addWish(card)}
+          onClick={() => {addWish(card);
+          alert("Added To Wishlist")}}
         >
           Add To WishList
         </button>

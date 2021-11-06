@@ -3,12 +3,12 @@
   padding: 0rem;
 }
 .cards {
-  margin: 1rem;
+  margin: 1.25rem;
   display: flex;
   flex-direction: column;
   background-color: white;
   height: 25rem;
-  width: 20rem;
+  width: 19rem;
   border-radius: 1rem;
   border: 0.1rem solid black;
   align-items: center;
