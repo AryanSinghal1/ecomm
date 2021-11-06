@@ -13,9 +13,11 @@ function Mycart() {
       <h2 style={{ color: "white", textAlign: "center" }}>
         Welcome to your Cart
       </h2>
-      <div style={{ color: "white", textAlign: "center" }} className="Products">
+      <div className="Products">
         {cartItem.length === 0 ? (
-          <EmptyCart />
+          <EmptyCart
+          message='Cart Is Empty'
+          />
         ) : (
           cartItem.map((e) => {
             return (

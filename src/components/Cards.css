@@ -14,13 +14,13 @@
   align-items: center;
   padding: 0.5rem;
 }
-#prodImage{
+#prodImage {
   width: 100%;
   height: 70%;
 }
 
-.proDesc{
-  height: 85% !important;
+.proDesc {
+  height: 85%;
   width: 90%;
   justify-content: center;
 }
@@ -37,21 +37,17 @@
   height: 27%;
   overflow-y: hidden;
   margin-left: 0.2rem;
- 
 }
-.Addbtns{
+.Addbtns {
   height: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
-
 }
 
-.Add{
+.Add {
   width: 7rem;
   height: 3rem;
   border-radius: 10px;
-
-
 }
