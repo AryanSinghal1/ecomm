@@ -21,8 +21,9 @@ function Cards(card) {
         <button
           className="Add"
           style={{ backgroundColor: "#780607" }}
-          onClick={() => {addWish(card);
-          alert("Added To Wishlist")}}
+          onClick={(e) => {addWish(card);
+          alert("Added To Wishlist");
+        e.preventDefault();}}
         >
           Add To WishList
         </button>

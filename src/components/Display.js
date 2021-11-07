@@ -3,7 +3,7 @@ import "./Display.css";
 import SeElements from "./SeElements";
 function Display() {
   const [prodName, setProdName] = useState("");
-  const handleInput = (e) =>{
+  const handleInput = (e) => {
     setProdName(e.target.value);
   };
   return (
@@ -11,11 +11,22 @@ function Display() {
       <div className="content">
         <form>
           <div className="searchBar">
-            <input type="text" placeholder="Search anything you want" onChange={handleInput} value={prodName}></input>
-            <button onClick={(e)=>{e.preventDefault()}}>Search</button>
+            <input
+              type="text"
+              placeholder="Search anything you want"
+              onChange={handleInput}
+              value={prodName}
+            ></input>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            >
+              Search
+            </button>
           </div>
+          {prodName!==""&&<SeElements name={prodName}/>}
         </form>
-        {/* { <SeElements name={prodName}/>} */}
         <div className="slshow">
           <div className="slideshow">
             <div className="slide">
