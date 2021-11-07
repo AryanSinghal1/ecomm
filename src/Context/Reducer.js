@@ -15,8 +15,6 @@ export const ReduceCart = (state, action) => {
         ...state,
         wishItem: state.wishItem.filter((prod) => prod.id !== action.payload),
       };
-      case SignedIn:
-      return { signIn: true };
     default:
       return state;
   }

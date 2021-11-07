@@ -3,11 +3,8 @@ import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { auth } from "../Firebase";
-import { useContext } from "react";
-import Context from "../../Context/Context";
 
 function Login() {
-  const { LoggedIn } = useContext(Context);
   const [LoginEmail, setLoginEmail] = useState("");
   const [LoginPassword, setLoginPassword] = useState("");
   const [Sign, setSign] = useState(false);
@@ -16,10 +13,6 @@ function Login() {
   onAuthStateChanged(auth, (currentUser) => {
     setGetUser(currentUser);
   });
-  const preventing = (e) => {
-    e.preventDefault();
-    console.log(getuser);
-  };
   const signin = async () => {
     try {
       const user = await signInWithEmailAndPassword(
@@ -27,9 +20,7 @@ function Login() {
         LoginEmail,
         LoginPassword
       );
-      console.log(user);
       setSign(true);
-      LoggedIn();
     } catch (error) {
       setSign(false);
       if (error.message === "Firebase: Error (auth/wrong-password).") {
@@ -74,9 +65,8 @@ function Login() {
             <button
               className="submitButton"
               onClick={signin}
-              onSubmit={preventing}
             >
-              Submit
+              Log In
             </button>
           </Link>
         </form>

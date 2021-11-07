@@ -8,7 +8,6 @@ function CartState({ children }) {
   const initialState = {
     cartItem: [],
     wishItem: [],
-    signIn: false,
   };
   const [state, dispatch] = useReducer(ReduceCart, initialState);
   const addCart = (item) => {
@@ -23,20 +22,15 @@ function CartState({ children }) {
   const removeWish = (id) => {
     dispatch({ type: RemoveFromWish, payload: id });
   };
-  const LoggedIn = () =>{
-    dispatch({type: SignedIn});
-  }
   return (
     <Context.Provider
       value={{
         cartItem: state.cartItem,
         wishItem: state.wishItem,
-        signIn: state.signIn,
         addCart,
         addWish,
         removeWish,
         removeItem,
-        LoggedIn,
       }}
     >
       {children}
