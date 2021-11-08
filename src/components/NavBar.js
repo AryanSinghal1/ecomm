@@ -5,7 +5,8 @@ import Context from "../Context/Context";
 import { useContext } from "react";
 
 function NavBar() {
-  const { cartItem } = useContext(Context);
+  const { cartItem, login } = useContext(Context);
+  console.log(login);
   return (
     <>
       <div className="NavBar">
@@ -26,9 +27,9 @@ function NavBar() {
               {(cartItem.length > 0 && <span>{cartItem.length}</span>)}
             </div>
           </Link>
-          <div><Link to="/register">Register</Link>
-          <Link to="/">Sign In</Link></div>
-          {/* {signIn&&<div><Link to="/logout">Log Out</Link></div>} */}
+          {!login && <div><Link to="/register">Register</Link>
+          <Link to="/">Sign In</Link></div>}
+          {login&&<div><Link to="/logout">Log Out</Link></div>}
         </div>
       </div>
     </>

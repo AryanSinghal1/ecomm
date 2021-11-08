@@ -7,6 +7,10 @@ import Context from "../Context/Context";
 import EmptyCart from "./EmptyCart";
 function Mycart() {
   const { cartItem } = useContext(Context);
+  // localStorage.setItem('cartItem', JSON.stringify(cartItem));
+  // const cart = localStorage.getItem("cartItem");
+  // const cartItem = JSON.parse(cart);
+  console.log(cartItem);
   return (
     <div className="shoppingCart">
       <NavBar />
