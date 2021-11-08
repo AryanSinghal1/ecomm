@@ -4,7 +4,7 @@ import "./HomePage.css";
 import Display from "./Display";
 import Features from "./Features";
 import Categories from "./Categories";
-
+import Footer from "./Footer";
 function HomePage() {
   return (
     <>
@@ -12,6 +12,7 @@ function HomePage() {
       <Display />
       <Features />
       <Categories />
+      <Footer />
     </>
   );
 }

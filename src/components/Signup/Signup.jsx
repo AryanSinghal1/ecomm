@@ -82,7 +82,7 @@ function Signup() {
           }}
           onClick={register}
         >
-          Submit
+          Register
         </button>
       </form>
       <div className="SignIn" style={{ color: "orange" }}>

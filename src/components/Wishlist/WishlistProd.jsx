@@ -1,9 +1,9 @@
 import React from "react";
 import { useContext } from "react";
-import Context from "../Context/Context";
-import "./Cards.css";
-function Cards(card) {
-  const { addCart, addWish } = useContext(Context);
+import Context from "../../Context/Context";
+import "../Cards.css";
+function WishlistProd(card) {
+  const { removeWish, addCart } = useContext(Context);
   return (
     <div className="cards">
       <div className="proDesc">
@@ -21,11 +21,9 @@ function Cards(card) {
         <button
           className="Add"
           style={{ backgroundColor: "#780607" }}
-          onClick={(e) => {
-            addWish(card);
-          }}
-          >
-          Add To WishList
+          onClick={() => removeWish(card.id)}
+        >
+          Remove From Wishlist
         </button>
         <button
           className="Add"
@@ -41,4 +39,4 @@ function Cards(card) {
   );
 }
 
-export default Cards;
+export default WishlistProd;

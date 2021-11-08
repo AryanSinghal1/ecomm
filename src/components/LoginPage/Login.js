@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { getAuth, setPersistence, browserSessionPersistence } from "firebase/auth";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { auth } from "../Firebase";
+import { useContext } from "react";
+import Context from "../../Context/Context";
 
 function Login() {
   const [LoginEmail, setLoginEmail] = useState("");
@@ -10,13 +13,10 @@ function Login() {
   const [Sign, setSign] = useState(false);
   const [showMessage, setShowMessage] = useState("");
   const [getuser, setGetUser] = useState({});
+  const { signedIn} = useContext(Context);
   onAuthStateChanged(auth, (currentUser) => {
     setGetUser(currentUser);
   });
-  const preventing = (e) => {
-    e.preventDefault();
-    console.log(getuser);
-  };
   const signin = async () => {
     try {
       const user = await signInWithEmailAndPassword(
@@ -33,10 +33,20 @@ function Login() {
       }
     }
   };
+
+// const aut = getAuth();
+// setPersistence(aut, browserSessionPersistence)
+//   .then(() => {
+//     return signInWithEmailAndPassword(aut, LoginEmail, LoginPassword);
+//   })
+//   .catch((error) => {
+//     // Handle Errors here.
+//     console.log(error.code);
+//     console.log(error.message);
+//   });
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
   return (
     <>
       <div className="loginPage">
@@ -69,10 +79,10 @@ function Login() {
           <Link id="submit" to={Sign ? "/homepage" : ""}>
             <button
               className="submitButton"
-              onClick={signin}
-              onSubmit={preventing}
+              onClick={()=>{signin();
+              if(Sign){signedIn()}}}
             >
-              Submit
+              Log In
             </button>
           </Link>
         </form>

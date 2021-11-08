@@ -6,6 +6,7 @@ import { Switch, Route } from "react-router";
 import Signup from "./components/Signup/Signup";
 import Mycart from "./components/Mycart";
 import Wishlist from "./components/Wishlist/Wishlist";
+import LogOut from "./components/LogOut";
 function App() {
   return (
     <>
@@ -32,6 +33,11 @@ function App() {
       <Switch>
         <Route exact path="/wishlist">
           <Wishlist />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route exact path="/logout">
+          <LogOut />
         </Route>
       </Switch>
     </>

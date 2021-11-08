@@ -7,15 +7,21 @@ import Context from "../Context/Context";
 import EmptyCart from "./EmptyCart";
 function Mycart() {
   const { cartItem } = useContext(Context);
+  // localStorage.setItem('cartItem', JSON.stringify(cartItem));
+  // const cart = localStorage.getItem("cartItem");
+  // const cartItem = JSON.parse(cart);
+  console.log(cartItem);
   return (
     <div className="shoppingCart">
       <NavBar />
       <h2 style={{ color: "white", textAlign: "center" }}>
         Welcome to your Cart
       </h2>
-      <div style={{ color: "white", textAlign: "center" }} className="Products">
+      <div className="Products">
         {cartItem.length === 0 ? (
-          <EmptyCart />
+          <EmptyCart
+          message='Cart Is Empty'
+          />
         ) : (
           cartItem.map((e) => {
             return (

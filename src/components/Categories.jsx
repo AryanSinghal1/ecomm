@@ -56,7 +56,6 @@ function Categories() {
                 price={e.price}
                 id={e.id}
                 key={e.id}
-                wishlist="Add To WishList"
               />
             );
           })}
