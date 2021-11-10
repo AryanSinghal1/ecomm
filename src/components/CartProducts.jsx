@@ -3,18 +3,8 @@ import { useContext } from "react";
 import Context from "../Context/Context";
 import "./CartProducts.css";
 function CartProducts(prod) {
-  const { removeItem } = useContext(Context);
-  const [item, setItem] = useState(0);
-  const decrease = () => {
-    if (item > 0) {
-      setItem(item - 1);
-    } else {
-      console.log("error");
-    }
-  };
-  const increase = () => {
-    setItem(item + 1);
-  };
+  const { removeItem, IncVal, DecVal } = useContext(Context);
+  const [item, setItem] = useState(1);
   return (
     <div className="products">
       <div className="productImages">
@@ -27,11 +17,15 @@ function CartProducts(prod) {
         <strong>Rs. {prod.price}</strong>
       </div>
       <div id="items">
-        <button className="btn" onClick={increase}>
+        <button className="btn" onClick={()=>{setItem(item+1);
+        IncVal();
+        }}>
           +
         </button>
         <h2>{item}</h2>
-        <button className="btn" onClick={decrease}>
+        <button className="btn" onClick={()=>{if(item>0){setItem(item-1);
+        DecVal();}
+        }}>
           -
         </button>
       </div>

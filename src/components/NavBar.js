@@ -6,14 +6,16 @@ import { useContext } from "react";
 
 function NavBar() {
   const { cartItem, login } = useContext(Context);
-  console.log(login);
+
   return (
     <>
       <div className="NavBar">
         <div className="Navigation">
           <Link to="/homepage">Home</Link>
           <a href="javascript: document.body.scrollIntoView(false);">About</a>
-          <a href="javascript: document.body.scrollIntoView(false);">Contact Us</a>
+          <a href="javascript: document.body.scrollIntoView(false);">
+            Contact Us
+          </a>
         </div>
         <div className="Navigation Nav2">
           <Link to="/wishlist">WishList</Link>
@@ -24,12 +26,20 @@ function NavBar() {
                 alt="My Cart"
               ></img>
               <p>My Cart&nbsp;</p>
-              {(cartItem.length > 0 && <span>{cartItem.length}</span>)}
+              {cartItem.length > 0 && <span>{cartItem.length}</span>}
             </div>
           </Link>
-          {!login && <div><Link to="/register">Register</Link>
-          <Link to="/">Sign In</Link></div>}
-          {login&&<div><Link to="/logout">Log Out</Link></div>}
+          {!login && (
+            <div>
+              <Link to="/register">Register</Link>
+              <Link to="/">Sign In</Link>
+            </div>
+          )}
+          {login && (
+            <div>
+              <Link to="/logout">Log Out</Link>
+            </div>
+          )}
         </div>
       </div>
     </>

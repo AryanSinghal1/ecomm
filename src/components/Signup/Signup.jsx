@@ -17,8 +17,9 @@ function Signup() {
           auth,
           Email,
           Password
-        );
-        console.log(user);
+          );
+          console.log(user);
+          alert("Registered SuccessFully");
       } catch (error) {
         console.log(error.message);
       }

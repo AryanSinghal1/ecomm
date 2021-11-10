@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import Context from "./Context";
 import React from "react";
-import { AddToCart, RemoveCartItem, AddToWish, RemoveFromWish, LoggedIn } from "./Types";
+import { AddToCart, RemoveCartItem, AddToWish, RemoveFromWish, LoggedIn, IncQty, DecQty } from "./Types";
 import { ReduceCart } from "./Reducer";
 
 function CartState({ children }) {
@@ -9,6 +9,7 @@ function CartState({ children }) {
     cartItem: [],
     wishItem: [],
     login: false,
+    qty: 1,
   };
   const [state, dispatch] = useReducer(ReduceCart, initialState);
   const addCart = (item) => {
@@ -26,12 +27,21 @@ function CartState({ children }) {
   const signedIn = (e) => {
     dispatch({type: LoggedIn, payload: e})
   }
+  const IncVal = (e) => {
+    dispatch({type: IncQty, payload: e})
+  }
+  const DecVal = (e) => {
+    dispatch({type: DecQty, payload: e})
+  }
   return (
     <Context.Provider
       value={{
         cartItem: state.cartItem,
         wishItem: state.wishItem,
         login: state.login,
+        qty: state.qty,
+        IncVal,
+        DecVal,
         signedIn,
         addCart,
         addWish,
