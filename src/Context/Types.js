@@ -5,3 +5,4 @@ export const RemoveFromWish = "RemoveFromWish";
 export const LoggedIn = "LoggedIn";
 export const IncQty = "IncQty";
 export const DecQty = "DecQty";
+export const StartQty = "StartQty";

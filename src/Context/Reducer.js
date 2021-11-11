@@ -1,4 +1,4 @@
-import { AddToCart, RemoveCartItem, AddToWish, RemoveFromWish ,LoggedIn, IncQty, DecQty} from "./Types";
+import { AddToCart, RemoveCartItem, AddToWish, RemoveFromWish ,LoggedIn, IncQty, DecQty, StartQty} from "./Types";
 export const ReduceCart = (state, action) => {
   switch (action.type) {
     case AddToCart:
@@ -30,6 +30,11 @@ export const ReduceCart = (state, action) => {
             ...state,
             qty: state.qty-1,
           };
+          case StartQty:
+            return{
+              ...state,
+              qty: state.qty=1
+            }
     default:
       return state;
   }

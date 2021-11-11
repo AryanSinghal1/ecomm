@@ -42,7 +42,7 @@ function Mycart() {
             Your total is:&nbsp;&nbsp;
           </span>
           <span style={{ color: "white" }}>
-            {cartItem.reduce((amount, item) => item.price * qty + amount, 0)}
+            {cartItem.reduce((amount, item) => item.price*qty + amount, 0)}
           </span>
         </div>
       )}
