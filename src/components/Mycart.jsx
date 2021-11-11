@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CartProducts from "./CartProducts";
 import NavBar from "./NavBar";
 import "./MyCart.css";
@@ -6,11 +6,11 @@ import { useContext } from "react";
 import Context from "../Context/Context";
 import EmptyCart from "./EmptyCart";
 function Mycart() {
-  const { cartItem } = useContext(Context);
-  // localStorage.setItem('cartItem', JSON.stringify(cartItem));
-  // const cart = localStorage.getItem("cartItem");
-  // const cartItem = JSON.parse(cart);
+  var { cartItem, qty } = useContext(Context);
   console.log(cartItem);
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItem));
+  });
   return (
     <div className="shoppingCart">
       <NavBar />
@@ -19,9 +19,7 @@ function Mycart() {
       </h2>
       <div className="Products">
         {cartItem.length === 0 ? (
-          <EmptyCart
-          message='Cart Is Empty'
-          />
+          <EmptyCart message="Cart Is Empty" />
         ) : (
           cartItem.map((e) => {
             return (
@@ -44,7 +42,7 @@ function Mycart() {
             Your total is:&nbsp;&nbsp;
           </span>
           <span style={{ color: "white" }}>
-            {cartItem.reduce((amount, item) => item.price + amount, 0)}
+            {cartItem.reduce((amount, item) => item.price*qty + amount, 0)}
           </span>
         </div>
       )}

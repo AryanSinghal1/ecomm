@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { getAuth, setPersistence, browserSessionPersistence } from "firebase/auth";
+import { setPersistence, browserSessionPersistence } from "firebase/auth";
+// import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from "firebase/auth";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { auth } from "../Firebase";
@@ -13,7 +14,7 @@ function Login() {
   const [Sign, setSign] = useState(false);
   const [showMessage, setShowMessage] = useState("");
   const [getuser, setGetUser] = useState({});
-  const { signedIn} = useContext(Context);
+  const { signedIn } = useContext(Context);
   onAuthStateChanged(auth, (currentUser) => {
     setGetUser(currentUser);
   });
@@ -34,16 +35,20 @@ function Login() {
     }
   };
 
-// const aut = getAuth();
-// setPersistence(aut, browserSessionPersistence)
-//   .then(() => {
-//     return signInWithEmailAndPassword(aut, LoginEmail, LoginPassword);
-//   })
-//   .catch((error) => {
-//     // Handle Errors here.
-//     console.log(error.code);
-//     console.log(error.message);
-//   });
+  // const auth = getAuth();
+  // const signin = () => {
+  // setPersistence(auth, browserSessionPersistence)
+  //   .then(() => {
+  //     setSign(true);
+  //     return signInWithEmailAndPassword(auth, LoginEmail, LoginPassword);
+  //   })
+  //   .catch((error) => {
+  //     // Handle Errors here.
+  //     setSign(false);
+  //     const errorCode = error.code;
+  //     const errorMessage = error.message;
+  //   });
+  // }
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -79,14 +84,18 @@ function Login() {
           <Link id="submit" to={Sign ? "/homepage" : ""}>
             <button
               className="submitButton"
-              onClick={()=>{signin();
-              if(Sign){signedIn()}}}
+              onClick={() => {
+                signin();
+                if (Sign) {
+                  signedIn();
+                }
+              }}
             >
               Log In
             </button>
           </Link>
         </form>
-        <div style={{ color: "black" }}>{showMessage}</div>
+        <div style={{ color: "red", fontWeight: "bolder" }}>{showMessage}</div>
         <div className="SignUp" style={{ color: "orange" }}>
           <span>New To YourCart? </span>
           <span>
