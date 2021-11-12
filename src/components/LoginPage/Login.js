@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { setPersistence, browserSessionPersistence } from "firebase/auth";
 // import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from "firebase/auth";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { auth } from "../Firebase";
 import { useContext } from "react";
 import Context from "../../Context/Context";
@@ -11,13 +11,9 @@ import Context from "../../Context/Context";
 function Login() {
   const [LoginEmail, setLoginEmail] = useState("");
   const [LoginPassword, setLoginPassword] = useState("");
-  const [Sign, setSign] = useState(false);
   const [showMessage, setShowMessage] = useState("");
-  const [getuser, setGetUser] = useState({});
   const { signedIn } = useContext(Context);
-  onAuthStateChanged(auth, (currentUser) => {
-    setGetUser(currentUser);
-  });
+  const history = useHistory();
   const signin = async () => {
     try {
       const user = await signInWithEmailAndPassword(
@@ -26,29 +22,15 @@ function Login() {
         LoginPassword
       );
       console.log(user);
-      setSign(true);
+      signedIn();
+      history.push("/homepage");
     } catch (error) {
-      setSign(false);
       if (error.message === "Firebase: Error (auth/wrong-password).") {
         setShowMessage("Wrong Password");
       }
     }
   };
 
-  // const auth = getAuth();
-  // const signin = () => {
-  // setPersistence(auth, browserSessionPersistence)
-  //   .then(() => {
-  //     setSign(true);
-  //     return signInWithEmailAndPassword(auth, LoginEmail, LoginPassword);
-  //   })
-  //   .catch((error) => {
-  //     // Handle Errors here.
-  //     setSign(false);
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //   });
-  // }
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -81,19 +63,14 @@ function Login() {
             By continuing, you agree to Yourkart's Terms of Use and Privacy
             Policy.
           </p>
-          <Link id="submit" to={Sign ? "/homepage" : ""}>
             <button
               className="submitButton"
               onClick={() => {
                 signin();
-                if (Sign) {
-                  signedIn();
-                }
               }}
             >
               Log In
             </button>
-          </Link>
         </form>
         <div style={{ color: "red", fontWeight: "bolder" }}>{showMessage}</div>
         <div className="SignUp" style={{ color: "orange" }}>
