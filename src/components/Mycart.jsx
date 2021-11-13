@@ -10,10 +10,10 @@ function Mycart() {
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItem));
   });
-  useEffect(()=>{
+  useEffect(() => {
     const item = localStorage.getItem("cartItems");
     JSON.parse(item);
-  })
+  });
   return (
     <div className="shoppingCart">
       <NavBar />
@@ -40,10 +40,8 @@ function Mycart() {
       {cartItem.length === 0 ? (
         ""
       ) : (
-        <div className = "subtotal">
-          <span>
-            Your Total is: Rs.&nbsp;
-          </span>
+        <div className="subtotal">
+          <span>Your Total is: Rs.&nbsp;</span>
           <span>
             {cartItem.reduce((amount, item) => item.price * qty + amount, 0)}
           </span>
