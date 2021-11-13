@@ -7,6 +7,9 @@
   background-color: white;
   width: 100%;
   overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 .Navigation {
   width: 100%;
@@ -58,5 +61,8 @@ a {
   transition: ease-out 0.25s;
 }
 a:hover {
+  border-bottom: 3px solid aqua;
+}
+.active{
   border-bottom: 3px solid aqua;
 }
