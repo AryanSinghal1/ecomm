@@ -22,6 +22,9 @@ function Signup() {
           alert("Registered SuccessFully");
       } catch (error) {
         console.log(error.message);
+        if (error.message === "Firebase: Error (auth/email-already-in-use).") {
+          alert("Email already in use");
+        }
       }
     } else if (Password !== ReEnter) {
       setErrorMessage("Paswords Do Not Match");

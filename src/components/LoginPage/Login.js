@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { setPersistence, browserSessionPersistence } from "firebase/auth";
-// import { getAuth, setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../Firebase";
@@ -25,10 +23,8 @@ function Login() {
       signedIn();
       history.push("/homepage");
     } catch (error) {
-      if (error.message === "Firebase: Error (auth/wrong-password).") {
-        setShowMessage("Wrong Password");
+      alert(error.message);
       }
-    }
   };
 
   const handleSubmit = (e) => {
@@ -63,14 +59,14 @@ function Login() {
             By continuing, you agree to Yourkart's Terms of Use and Privacy
             Policy.
           </p>
-            <button
-              className="submitButton"
-              onClick={() => {
-                signin();
-              }}
-            >
-              Log In
-            </button>
+          <button
+            className="submitButton"
+            onClick={() => {
+              signin();
+            }}
+          >
+            Log In
+          </button>
         </form>
         <div style={{ color: "red", fontWeight: "bolder" }}>{showMessage}</div>
         <div className="SignUp" style={{ color: "orange" }}>
