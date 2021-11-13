@@ -27,13 +27,11 @@ function Signup() {
       setErrorMessage("Paswords Do Not Match");
     }
   };
-  const formSubmit = (e) => {
-    e.preventDefault();
-  };
   return (
     <div className="regPage">
       <h1 style={{ color: "white" }}>Register To YourCart</h1>
-      <form className="regBox" onSubmit={formSubmit}>
+      <form className="regBox"
+      >
         <div className="inputField">
           <p>Enter Your Name:</p>
           <input type="text" placeholder="Enter Your Name"></input>
@@ -81,7 +79,8 @@ function Signup() {
             border: "none",
             cursor: "pointer",
           }}
-          onClick={register}
+          onClick={(e)=>{register();
+          e.preventDefault();}}
         >
           Register
         </button>
