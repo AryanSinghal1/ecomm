@@ -40,11 +40,11 @@ function Mycart() {
       {cartItem.length === 0 ? (
         ""
       ) : (
-        <div style={{ textAlign: "center" }}>
-          <span className="subtotal" style={{ color: "white" }}>
-            Your total is:&nbsp;&nbsp;
+        <div className = "subtotal">
+          <span>
+            Your Total is: Rs.&nbsp;
           </span>
-          <span style={{ color: "white" }}>
+          <span>
             {cartItem.reduce((amount, item) => item.price * qty + amount, 0)}
           </span>
         </div>
