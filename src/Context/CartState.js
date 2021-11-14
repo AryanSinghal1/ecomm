@@ -1,14 +1,22 @@
 import { useReducer } from "react";
 import Context from "./Context";
 import React from "react";
-import { AddToCart, RemoveCartItem, AddToWish, RemoveFromWish, LoggedIn, IncQty, DecQty, StartQty } from "./Types";
+import {
+  AddToCart,
+  RemoveCartItem,
+  AddToWish,
+  RemoveFromWish,
+  LoggedIn,
+  IncQty,
+  DecQty,
+  StartQty,
+} from "./Types";
 import { ReduceCart } from "./Reducer";
 
 function CartState({ children }) {
   const initialState = {
     cartItem: [],
     wishItem: [],
-    login: false,
     qty: 1,
   };
   const [state, dispatch] = useReducer(ReduceCart, initialState);
@@ -24,29 +32,24 @@ function CartState({ children }) {
   const removeWish = (id) => {
     dispatch({ type: RemoveFromWish, payload: id });
   };
-  const signedIn = (e) => {
-    dispatch({type: LoggedIn, payload: e})
-  }
   const IncVal = (e) => {
-    dispatch({type: IncQty, payload: e})
-  }
+    dispatch({ type: IncQty, payload: e });
+  };
   const DecVal = (e) => {
-    dispatch({type: DecQty, payload: e})
-  }
+    dispatch({ type: DecQty, payload: e });
+  };
   const InitQty = (e) => {
-    dispatch({type: StartQty, payload: e})
-  }
+    dispatch({ type: StartQty, payload: e });
+  };
   return (
     <Context.Provider
       value={{
         cartItem: state.cartItem,
         wishItem: state.wishItem,
-        login: state.login,
         qty: state.qty,
         InitQty,
         IncVal,
         DecVal,
-        signedIn,
         addCart,
         addWish,
         removeWish,

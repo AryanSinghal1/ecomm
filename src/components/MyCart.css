@@ -10,9 +10,14 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  color: white; 
-  text-align: center; 
+  color: white;
+  text-align: center;
 }
 h2 {
   font-size: 1.5rem;
+}
+.subtotal {
+  text-align: center;
+  color: white;
+  border: 2px solid white;
 }
