@@ -8,12 +8,8 @@ import EmptyCart from "./EmptyCart";
 function Mycart() {
   const { cartItem, qty } = useContext(Context);
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItem));
-  });
-  useEffect(() => {
-    const item = localStorage.getItem("cartItems");
-    JSON.parse(item);
-  });
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
+  },[cartItem]);
   return (
     <div className="shoppingCart">
       <NavBar />
@@ -32,6 +28,7 @@ function Mycart() {
                 about={e.description}
                 price={e.price}
                 id={e.id}
+                key={e.id}
               />
             );
           })

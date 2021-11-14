@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext ,useEffect } from "react";
 import NavBar from "../NavBar";
 import "./Wishlist.css";
 import WishlistProd from "./WishlistProd";
@@ -6,6 +6,9 @@ import Context from "../../Context/Context";
 import EmptyCart from "../EmptyCart";
 function Wishlist() {
   const { wishItem } = useContext(Context);
+  useEffect(()=>{
+    localStorage.setItem("wishItem",JSON.stringify(wishItem));
+  });
   return (
     <div className="shoppingCart">
       <NavBar />
@@ -22,6 +25,7 @@ function Wishlist() {
                 description={e.description}
                 price={e.price}
                 id={e.id}
+                key={e.id}
               />
             );
           })

@@ -6,13 +6,13 @@ import {
   RemoveCartItem,
   AddToWish,
   RemoveFromWish,
-  LoggedIn,
   IncQty,
   DecQty,
   StartQty,
 } from "./Types";
 import { ReduceCart } from "./Reducer";
-
+const localCart = JSON.parse(localStorage.getItem("cartItem"))||"[]";
+const localWish = JSON.parse(localStorage.getItem("wishItem"))||"[]";
 function CartState({ children }) {
   const initialState = {
     cartItem: [],
