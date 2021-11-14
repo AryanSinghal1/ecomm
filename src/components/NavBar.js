@@ -1,24 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
 import { Link, NavLink } from "react-router-dom";
 import Context from "../Context/Context";
 import { useContext } from "react";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "./Firebase";
 
 function NavBar() {
-  const { cartItem, login } = useContext(Context);
+  const { cartItem } = useContext(Context);
+
+  const aut = getAuth();
+  const [log, setLog] = useState(false);
+  onAuthStateChanged(aut, (user) => {
+    if (user) {
+      setLog(true);
+    }
+  });
 
   return (
     <>
       <div className="NavBar">
         <div className="Navigation">
-          <NavLink exact activeClassName="active" to="/homepage">Home</NavLink>
+          <NavLink exact activeClassName="active" to="/homepage">
+            Home
+          </NavLink>
           <a href="javascript: document.body.scrollIntoView(false);">About</a>
           <a href="javascript: document.body.scrollIntoView(false);">
             Contact Us
           </a>
         </div>
         <div className="Navigation Nav2">
-          <NavLink exact activeClassName="active" to="/wishlist">WishList</NavLink>
+          <NavLink exact activeClassName="active" to="/wishlist">
+            WishList
+          </NavLink>
           <NavLink exact activeClassName="active" to="/cart">
             <div className="YourCart">
               <img
@@ -29,15 +43,19 @@ function NavBar() {
               {cartItem.length > 0 && <span>{cartItem.length}</span>}
             </div>
           </NavLink>
-          {!login && (
+          {!log && (
             <div>
               <Link to="/register">Register</Link>
               <Link to="/">Sign In</Link>
             </div>
           )}
-          {login && (
-            <div>
-              <Link to="/logout">Log Out</Link>
+          {log && (
+            <div
+              onClick={() => {
+                signOut(auth);
+              }}
+            >
+              <NavLink to="/logout">Log Out</NavLink>
             </div>
           )}
         </div>

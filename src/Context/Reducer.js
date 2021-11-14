@@ -1,4 +1,13 @@
-import { AddToCart, RemoveCartItem, AddToWish, RemoveFromWish ,LoggedIn, IncQty, DecQty, StartQty} from "./Types";
+import {
+  AddToCart,
+  RemoveCartItem,
+  AddToWish,
+  RemoveFromWish,
+  LoggedIn,
+  IncQty,
+  DecQty,
+  StartQty,
+} from "./Types";
 export const ReduceCart = (state, action) => {
   switch (action.type) {
     case AddToCart:
@@ -15,26 +24,21 @@ export const ReduceCart = (state, action) => {
         ...state,
         wishItem: state.wishItem.filter((prod) => prod.id !== action.payload),
       };
-      case LoggedIn:
-        return {
-          ...state,
-          login: state.login=true
-        };
-        case IncQty:
-          return{
-            ...state,
-            qty: state.qty+1,
-          };
-        case DecQty:
-          return{
-            ...state,
-            qty: state.qty-1,
-          };
-          case StartQty:
-            return{
-              ...state,
-              qty: state.qty=1
-            }
+    case IncQty:
+      return {
+        ...state,
+        qty: state.qty + 1,
+      };
+    case DecQty:
+      return {
+        ...state,
+        qty: state.qty - 1,
+      };
+    case StartQty:
+      return {
+        ...state,
+        qty: (state.qty = 1),
+      };
     default:
       return state;
   }

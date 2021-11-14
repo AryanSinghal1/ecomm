@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Signup.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase";
@@ -9,6 +9,7 @@ function Signup() {
   const [Password, setPassword] = useState("");
   const [ReEnter, setReEnter] = useState("");
   const [ErrorMessage, setErrorMessage] = useState("");
+  const history = useHistory();
   const register = async () => {
     if (Password === ReEnter) {
       setErrorMessage("");
@@ -17,9 +18,10 @@ function Signup() {
           auth,
           Email,
           Password
-          );
-          console.log(user);
-          alert("Registered SuccessFully");
+        );
+        console.log(user);
+        alert("Registered SuccessFully");
+        history.push("/homepage");
       } catch (error) {
         console.log(error.message);
         if (error.message === "Firebase: Error (auth/email-already-in-use).") {
@@ -33,8 +35,7 @@ function Signup() {
   return (
     <div className="regPage">
       <h1 style={{ color: "white" }}>Register To YourCart</h1>
-      <form className="regBox"
-      >
+      <form className="regBox">
         <div className="inputField">
           <p>Enter Your Name:</p>
           <input type="text" placeholder="Enter Your Name"></input>
@@ -82,8 +83,10 @@ function Signup() {
             border: "none",
             cursor: "pointer",
           }}
-          onClick={(e)=>{register();
-          e.preventDefault();}}
+          onClick={(e) => {
+            register();
+            e.preventDefault();
+          }}
         >
           Register
         </button>

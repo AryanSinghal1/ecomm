@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../Firebase";
-import { useContext } from "react";
-import Context from "../../Context/Context";
 
 function Login() {
   const [LoginEmail, setLoginEmail] = useState("");
   const [LoginPassword, setLoginPassword] = useState("");
-  const [showMessage, setShowMessage] = useState("");
-  const { signedIn } = useContext(Context);
   const history = useHistory();
   const signin = async () => {
     try {
@@ -20,11 +16,10 @@ function Login() {
         LoginPassword
       );
       console.log(user);
-      signedIn();
       history.push("/homepage");
     } catch (error) {
       alert(error.message);
-      }
+    }
   };
 
   const handleSubmit = (e) => {
@@ -68,7 +63,6 @@ function Login() {
             Log In
           </button>
         </form>
-        <div style={{ color: "red", fontWeight: "bolder" }}>{showMessage}</div>
         <div className="SignUp" style={{ color: "orange" }}>
           <span>New To YourCart? </span>
           <span>
